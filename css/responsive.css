@@ -1,0 +1,245 @@
+/*---------------------------- Tablet */
+/* 768~1199범위의 해상도 */
+@media screen and (min-width:768px) and (max-width:1199px){
+
+  /* Header&visual */
+  #pcheader{
+    width: 100%;
+    flex-flow: column wrap;
+  }
+  .topMenu{flex-direction: column;}
+  .logo{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .gnb{
+    width: 100%;
+    background-color: rgba(80,100,100,0.7);
+  }
+  .gnbmenu{justify-content: center;}
+
+  #visual{
+    max-width: 100%;
+    height: 800px;
+    background: url(../image/visual1.jpg) no-repeat center center fixed;
+    background-size: cover;
+  }
+  #visual h2{
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 70px;
+    letter-spacing: 1px;
+  }
+  section{width: 100%;}
+  .section1 a{
+    flex-direction: column;
+    justify-content: center;
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+  .section2{width: 100%;}
+  .post{width: 100%;}
+  .image{
+    width: 500px;
+    overflow: hidden;
+  }
+  .image,.desc{
+    flex: 1;
+    height: auto;
+  }
+  .desc h2{font-size: 50px;}
+
+  .section3{
+    width: 47%;
+    height: auto;
+  }
+  .keyword ul li:nth-child(7),.keyword ul li:nth-child(8){display: none;}
+  
+  .section4{
+    width:47%;
+    height: auto;
+  }
+  .qna ul li:nth-child(4),.qna ul li:nth-child(5){
+    display: none;
+  }
+  
+  .section5{
+    width: 100%;
+  }
+  .gallery ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+  }
+  .gallery ul li{
+    width: 90%;
+  }
+  .gallery ul li:nth-of-type(7),
+  .gallery ul li:nth-of-type(8),
+  .gallery ul li:nth-of-type(9){
+    display: none;
+  }
+  footer{
+    height: auto;
+    text-align: center;
+    margin: auto;
+  }
+  .f_logo{
+    width: 60%;
+    display: flex;
+    margin: auto;
+  }
+  .f_logo p{
+    margin: 25px;
+  }
+}
+
+
+/*---------------------------- Mobile */
+/* 767이하 ~범위의 해상도 */
+@media screen and (max-width:767px){
+  #pcheader{display: none;}
+  #moheader{display: block;}
+
+  #moheader .mo_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  rgba(10,100,170,0.8);
+  }
+  #moheader .mo_view{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    z-index: 1000;
+    background-color: rgba(80, 50, 100, 0.9);
+  }
+  .mo_menu_btn img{
+    height: 25px;
+    transform: translateX(-20px);
+    cursor: pointer;
+    position: relative;
+    z-index: 2000;
+  }
+  .logo img{height: 35px;}
+  .mognb ul li.close{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1000;
+    height: 20px;
+  }
+
+  .mo_view .mognb ul li.close img{width: 100%;}
+  .mognb ul li:not(.close){
+    width: 100%;
+    height: 60px;
+    top: 50px;
+    color: #fff;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    transform: translateY(50px);
+  }
+  .mognb ul li:nth-child(2){border-top:1px solid #ccc ;}
+  #visual{
+    max-width: 100%;
+    background: url(../image/visual3.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 450px;
+  }
+  #visual h2{
+    font-size: 40px;
+    left: 20px;
+    transform: translate(40px,-100px);
+  }
+
+  section{
+    flex-flow: column;
+    max-width:100%;
+  }
+  .section1{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+  .section1 a{
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .section1 img{
+    width: 25%;
+    max-width: 25%;
+  }
+  .section2{
+    width: 100%;
+    height: auto;
+  }
+  .post{
+    flex-flow: column wrap;
+    margin: 5px;
+
+  }
+  .desc{
+    text-align: center;
+    height: auto;
+    margin: auto;
+    padding: 10px;
+  }
+  .desc h2{
+    font-size: 35px;
+    padding-top:5px ;
+    color: #eee;
+  }
+  .desc p{font-size: 17px;}
+  .section3{
+    width: 100%;
+    height: auto;
+  }
+  .keyword ul li:nth-child(5),
+  .keyword ul li:nth-child(6),
+  .keyword ul li:nth-child(7),
+  .keyword ul li:nth-child(8){
+    display: none;
+  }
+  .section4{
+    width: 100%;
+    height: auto;
+    padding-bottom:40px ;
+  }
+  .qna ul li:nth-child(3),
+  .qna ul li:nth-child(4),
+  .qna ul li:nth-child(5){
+    display: none;
+  }
+  .section5{width: 100%;}
+
+  .gallery ul li:nth-of-type(7),
+  .gallery ul li:nth-of-type(8),
+  .gallery ul li:nth-of-type(9){
+    display: none;
+  }
+
+    footer{
+      height: auto;
+    }
+    .f_logo{
+      justify-content: center;
+      text-align: center;
+      transform: translateX(-30%);
+      
+    }
+    .f_logo img{height: 40px;}
+    .f_logo p{padding-bottom: 10px;}
+  }
+  
